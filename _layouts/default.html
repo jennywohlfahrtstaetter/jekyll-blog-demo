@@ -12,14 +12,22 @@
 
 
 <body>
-    <header>
-        This is the header
+    <header class="grid">
+        <div class="col-6">
+            <h1>This is the header</h1>
+        </div>
+        <div class="col-6 right">
+            <nav class="main-nav">
+             <a href="/index.html"> Home</a>
+             <a href="/blog.html"> Blog</a>
+            </nav>
+        </div>
     </header>
 
     {{content}}
 
     <footer>
-        This is the footer
+        <h1>This is the footer</h1>
     </footer>
 </body>
 
