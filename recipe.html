@@ -4,11 +4,19 @@ title: Recipes
 ---
 <h1 class="center">Find delicious recipes!</h1>
 
+
+
 <section class="grid padded">
 
 {% for recipe in site.recipes %}
 
-<a href="{{recipe.url}}">{{recipe.title}}</a>
+<div class="col-4_xs-12">
+    <div class="bg-image portrait margin-b-1" style="background-image: url('{{recipe.featured_image}}')"></div>
+    <h3>{{recipe.title}}</h3>
+    <p>{{recipe.description}}</p>
+    <a href="{{recipe.url}}">Read More</a>
+</div>
+
 
 {% endfor %}
 
