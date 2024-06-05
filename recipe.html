@@ -1,0 +1,34 @@
+---
+layout: default
+title: Recipes
+---
+<h1 class="center">Find delicious recipes!</h1>
+
+<section class="grid padded">
+
+{% for recipe in site.recipes %}
+
+<a href="{{recipe.url}}">{{recipe.title}}</a>
+
+{% endfor %}
+
+</section>
+
+
+<!-- <section class="grid"> -->
+
+    <!-- category filter for things other than blog posts -> goes on layout page -->
+    <!-- {% assign relevant-recipes = site.recipes | where_exp:"recipe", "recipe.categories contains page.category" %}
+
+        {% for recipe in relevant-recipes %}
+
+        <div class="col-4_xs-12">
+            <div class="bg-image square margin-b-1" style="background-image: url('{{recipe.featured_image}}')"></div>
+            <h3>{{recipe.title}}</h3>
+            <p>{{recipe.description}}</p>
+            <a href="{{recipe.url}}" class="button">Read More</a>
+        </div>
+
+    {% endfor %}
+
+</section> -->

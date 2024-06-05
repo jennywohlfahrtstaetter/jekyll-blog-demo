@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<!-- intro section -->
+<section class="grid">
+    <div class="padded-1 col-8_xs-12">
+        <div class="intro padded-1">
+            <h1>{{page.title}}</h1>
+            
+            {% for item in page.categories %}
+
+            <span class="tag"> {{item}} </span>
+            <!-- nur item nennen möglich weil man in der kategorie categories keine weiteren unterteilungen hat und alle items nennen will -->
+
+            {% endfor %}
+        </div>
+        {{content}}
+    </div>
+
+    <!-- & sidebar -->
+    <div class="padded-2 col-4_xs-12">
+        <h2>Recent Posts</h2>
+
+        {% for recipe in site.recipes %}
+
+        <a href="{{recipe.url}}" class="margin-b-1">{{recipe.title}}</a>
+
+        {% endfor %}
+
+    </div>
+</section>

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{{content}}
+
+<section class="grid padded">
+
+    {% if page.intro-header == true %}
+        <div class="col-12 center">
+             <h1>{{page.category | capitalize}} Posts</h1>
+            <p>{{page.description}}</p>
+        </div>
+
+    {% endif %}
+
+    {% for recipe in site.recipes[page.category] %}
+
+    {% if page.post-style == normal %}
+
+            {% include recipe-square-loop.html %}
+
+        {% else %}
+        
+            {% include recipe-portrait-loop.html %}
+
+        {% endif %}
+
+    {% endfor %}
+<!-- 
+    {% assign relevant-recipes = site.recipes | where_exp:"recipe", "recipe.categories contains page.category" %}
+
+    {% for recipe in relevant-recipes %}
+
+        <a href="{{recipe.url}}">{{recipe.title}}</a>
+
+    {% endfor %} -->
+</section>
