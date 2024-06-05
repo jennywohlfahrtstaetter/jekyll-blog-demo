@@ -2,7 +2,8 @@
 layout: recipe
 title: Pizza
 categories: ['savory', 'round']
-featured_image: /images/post-img-2.jpg
+featured_image: https://source.unsplash.com/60nzTP7_hMQ
+post-style: normal
 ---
 
 ## This is a Pizza recipe

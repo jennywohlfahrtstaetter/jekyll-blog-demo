@@ -14,7 +14,10 @@ layout: default
 
     {% endif %}
 
-    {% for recipe in site.recipes[page.category] %}
+    
+    {% assign relevant-recipes = site.recipes | where_exp:"recipe", "recipe.categories contains page.category" %}
+
+    {% for recipe in relevant-recipes%}
 
     {% if page.post-style == normal %}
 
@@ -27,12 +30,5 @@ layout: default
         {% endif %}
 
     {% endfor %}
-<!-- 
-    {% assign relevant-recipes = site.recipes | where_exp:"recipe", "recipe.categories contains page.category" %}
 
-    {% for recipe in relevant-recipes %}
-
-        <a href="{{recipe.url}}">{{recipe.title}}</a>
-
-    {% endfor %} -->
 </section>

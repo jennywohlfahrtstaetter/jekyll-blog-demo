@@ -2,7 +2,8 @@
 layout: recipe
 title: Cookies
 categories: ['sweet', 'round']
-featured_image: 
+featured_image: https://source.unsplash.com/UY5kkN44XQA
+post-style: normal
 ---
 
 ## This is a Cookie recipe
