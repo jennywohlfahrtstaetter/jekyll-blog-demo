@@ -17,7 +17,7 @@ layout: default
     
     {% assign relevant-recipes = site.recipes | where_exp:"recipe", "recipe.categories contains page.category" %}
 
-    {% for recipe in relevant-recipes%}
+    {% for recipe in relevant-recipes %}
 
     {% if page.post-style == 'normal' %}
 
