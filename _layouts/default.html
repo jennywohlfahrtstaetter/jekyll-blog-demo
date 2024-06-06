@@ -12,15 +12,32 @@
 
 
 <body>
-    <header class="grid">
-        <div class="col-6">
-            <h1>This is the header</h1>
+    <header class="grid-middle">
+        <div class="col-5">
+            <a href="/" class="logo">LOGO</a>
         </div>
-        <div class="col-6 right">
-            <nav class="main-nav">
+
+        <nav class="col-7 right sm-hide">
              <a href="/index.html"> Home</a>
-             <a href="/blog.html"> Blog</a>
-             <a href="/recipe.html"> Recipes</a>
+            <!-- new dropdown menu for blog categories  -->
+            <div class="dropdown">
+                <a href="/blog.html" class="dropdown-title"> Blog</a>
+                <div class="dropdown-content">
+                    <a href="/archives/travel.html">Travel</a>
+                    <a href="/archives/bali.html">Bali</a>
+                    <a href="/archives/australia.html">Australia</a>
+                    <a href="/archives/east-coast.html">East Coast</a>
+                </div>
+            </div>
+            <!-- new dropdown menu for recipes  -->
+            <div class="dropdown">
+                <a href="/recipe.html" class="dropdown-title"> Recipes</a>
+                <div class="dropdown-content">
+                    <a href="/archives/sweet.html">Sweet</a>
+                    <a href="/archives/savory.html">Savory</a>
+                    <a href="/archives/round.html">Round</a>
+                </div>
+            </div>
             </nav>
 
         </div>
